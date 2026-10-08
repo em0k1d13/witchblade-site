@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BLVDE ACADEMY — Курсы программирования от Witchblade</title>
+  <meta name="description" content="Обучение разработке на C++, Python и Java от Senior Software Engineer Романа (Witchblvde)." />
+  <link rel="stylesheet" href="../all-css/blade-academy.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="brand">
+      <!-- Ссылка на главную выходит из папки -->
+      <a href="../index.html" class="brand-link">
+        <div class="brand-text">
+          <strong>Witchblade</strong><br/>
+          <span class="brand-sub">Dota 2 стример</span>
+        </div>
+      </a>
+    </div>
+    <nav aria-label="Разделы сайта" class="site-nav">
+      <ul>
+        <!-- Выходим из all-html и попадаем на главную -->
+        <li><a href="../index.html">🏠 Главная</a></li>
+        <!-- heroes.html лежит в этой же папке all-html, пишем напрямую -->
+        <li><a href="heroes.html">⚔️ Гайды: Герои</a></li>
+        <!-- Текущая страница -->
+        <li><a href="blade-academy.html" class="active">🎓 BLVDE ACADEMY</a></li>
+        <!-- Ссылка на контакты на главной странице -->
+        <li><a href="../index.html#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="academy-page-container container">
+  <!-- Хедер Академии -->
+  <section class="academy-hero">
+    <h1>🎓 BLVDE ACADEMY</h1>
+    <p class="academy-subtitle">Твой компилятор в мир коммерческой разработки. Учимся думать как инженеры, оптимизировать код и щелкать алгоритмы как семечки.</p>
+  </section>
+
+  <!-- Блок О Программе -->
+  <section class="academy-about grid">
+    <div class="card academy-info-card">
+      <div class="academy-icon">💻</div>
+      <h2>Стек & Технологии</h2>
+      <p>Обучение базируется на фундаментальных знаниях, необходимых для работы в High-Load проектах и прохождения олимпиадных тестов:</p>
+      <ul class="custom-bullet-list">
+        <li><strong>C++ (Core):</strong> Указатели, управление памятью, ООП, шаблоны и STL.</li>
+        <li><strong>Алгоритмы:</strong> Структуры данных, оценка сложности O(n), динамическое программирование.</li>
+        <li><strong>Многопоточность:</strong> Асинхронный код и параллельные вычисления.</li>
+      </ul>
+    </div>
+
+    <div class="card academy-info-card">
+      <div class="academy-icon">🚀</div>
+      <h2>Почему этот курс?</h2>
+      <p>Программа разработана практикующим Senior-разработчиком, а не теоретиками из учебников:</p>
+      <ul class="custom-bullet-list">
+        <li><strong>Код-ревью:</strong> Твой код проверяет лично Роман (Witchblade).</li>
+        <li><strong>Проекты в портфолио:</strong> Напишешь собственный софт и игровые микро-скрипты.</li>
+        <li><strong>No Toxic чат:</strong> Закрытый Discord-сервер студентов для помощи и обмена опытом.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Интерактивный Калькулятор Студента -->
+  <section class="academy-test card">
+    <h2>Тест: Готов ли ты к С++?</h2>
+    <p>Введи количество часов, которое ты готов уделять практике в неделю, чтобы узнать свой вердикт:</p>
+    <div class="test-calculator">
+      <input type="number" id="practice-hours" placeholder="Например: 15" min="0" max="168">
+      <button class="btn primary" id="calc-hours-btn">Рассчитать алгоритм успеха</button>
+    </div>
+    <div id="test-result" class="test-result-text"></div>
+  </section>
+
+  <!-- Форма записи на курс -->
+  <section class="academy-enroll card">
+    <h2>Подать заявку на тестовое задание</h2>
+    <p>Каждый абитуриент проходит проверку базового логического мышления. Оставь свои данные, чтобы получить тестовую задачу.</p>
+    
+    <form id="academy-form" action="#" method="post" class="academy-form-grid">
+      <div class="field">
+        <label for="student-name">Имя или Никнейм</label>
+        <input id="student-name" type="text" placeholder="Иван" required />
+      </div>
+      <div class="field">
+        <label for="student-email">Email для связи</label>
+        <input id="student-email" type="email" placeholder="student@example.com" required />
+      </div>
+      <div class="field full-width">
+        <label for="student-experience">Твой опыт в программировании</label>
+        <textarea id="student-experience" placeholder="Писал немного на Pascal в школе / Полный ноль / Знаю основы синтаксиса..." required></textarea>
+      </div>
+      <button class="btn primary full-width" type="submit">Отправить логи логов</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-brand">
+      <span class="footer-title">Witchblade</span>
+      <p class="footer-description">Официальный сайт стримера и инженера. Лайв-трансляции, глубокая аналитика и гайды по Dota 2.</p>
+    </div>
+    <div class="footer-nav">
+    <span class="footer-heading">Навигация</span>
+    <ul>
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="heroes.html">Гайды</a></li>
+        <li><a href="blade-academy.html">Academy</a></li>
+    </ul>
+    </div>
+    <div class="footer-socials">
+      <span class="footer-heading">Сообщество</span>
+      <div class="social-links">
+        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer">🟪 Twitch</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">🟥 YouTube</a>
+        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">🟦 Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-container">
+    <p>&copy; 2026 Witchblade. Все права защищены.</p>
+  </div>
+</footer>
+
+<!-- Модальное окно успешной отправки -->
+<div id="academy-success-modal" class="modal modal-hidden">
+  <div class="modal-content">
+    <h3>[SUCCESS] Данные скомпилированы!</h3>
+    <p>Твоя заявка успешно принята. Проверь почту в течение 24 часов — туда прилетит пулл-реквест с тестовым заданием.</p>
+    <button id="academy-modal-close" class="btn primary">Погнали кодить</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Интерактивный калькулятор часов
+  const calcBtn = document.getElementById('calc-hours-btn');
+  const hoursInput = document.getElementById('practice-hours');
+  const resultDiv = document.getElementById('test-result');
+
+  if (calcBtn && hoursInput && resultDiv) {
+    calcBtn.addEventListener('click', () => {
+      const hours = parseInt(hoursInput.value);
+      if (isNaN(hours) || hours <= 0) {
+        resultDiv.textContent = "[ERROR] Введи валидное количество часов!";
+        resultDiv.style.color = "#ff4a4a";
+      } else if (hours < 5) {
+        resultDiv.textContent = "Слишком мало потоков. С таким темпом ты выучишь C++ к выходу Dota 3. Увеличь нагрузку!";
+        resultDiv.style.color = "#ffcc00";
+      } else if (hours >= 5 && hours <= 20) {
+        resultDiv.textContent = "[Оптимально] Хороший баланс. Ты сможешь стабильно прогрессировать и не руинить свой основной GPM в жизни.";
+        resultDiv.style.color = "#00ff00";
+      } else {
+        resultDiv.textContent = "[⚡ Режим Сеньора] Экстремальный фарм знаний! С такой самоотдачей ты обгонишь алгоритмы Романа.";
+        resultDiv.style.color = "#8a2be2";
+      }
+    });
+  }
+
+  // Логика формы
+  const form = document.getElementById('academy-form');
+  const modal = document.getElementById('academy-success-modal');
+  const closeBtn = document.getElementById('academy-modal-close');
+
+  if (form && modal && closeBtn) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal.classList.remove('modal-hidden');
+    });
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('modal-hidden');
+      form.reset();
+    });
+  }
+});
+</script>
+</body>
+</html>

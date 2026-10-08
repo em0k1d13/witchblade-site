@@ -1,0 +1,199 @@
+:root {
+  --wb-bg-main: #0a0c10;
+  --wb-bg-card: #11141b;
+  --wb-bg-surface: #171b26;
+  --wb-border: #222836;
+  --wb-text-bright: #f0f4f8;
+  --wb-text-muted: #8492a6;
+  --wb-text-disabled: #475569;
+  
+  /* Единый фиолетовый акцент сайта */
+  --color-purple: #8b5cf6;
+}
+
+/* BASE PREMIUM PAGE SETTINGS */
+.wb-premium-page {
+  background-color: var(--wb-bg-main);
+  color: var(--wb-text-bright);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wb-main-container {
+  max-width: 1200px;
+  margin: 110px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.wb-page-header {
+  margin-bottom: 50px;
+  border-bottom: 1px solid var(--wb-border);
+  padding-bottom: 24px;
+}
+
+.wb-category-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-purple);
+  font-weight: 700;
+}
+
+.wb-page-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.wb-hero-lead {
+  font-size: 16px;
+  color: var(--wb-text-muted);
+  margin: 0;
+}
+
+/* СЕТКА ГАЙДОВ ГЕРОЕВ */
+body .wb-heroes-grid,
+body .wb-skills-dashboard {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+/* КАРТОЧКА ГЕРОЯ (ПЛОТНЫЙ PREMIUM СТИЛЬ) */
+body .wb-hero-card,
+body .wb-section.wb-hero-grid-item {
+  background: var(--wb-bg-card) !important;
+  border: 1px solid var(--wb-border) !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+  box-sizing: border-box !important;
+  padding: 24px !important;
+}
+
+/* При наведении на ЛЮБУЮ карточку — фиолетовое неоновое свечение */
+body .wb-hero-card:hover,
+body .wb-section.wb-hero-grid-item:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--color-purple) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.2) !important;
+}
+
+/* СТИЛИЗАЦИЯ ВНУТРЕННИХ ЭЛЕМЕНТОВ КАРТОЧЕК */
+body .wb-skill-card {
+  display: flex !important;
+  gap: 16px !important;
+  align-items: center !important;
+}
+
+body .wb-skill-thumb {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+  border: 1px solid var(--wb-border) !important;
+}
+
+body .wb-skill-info h4 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--wb-text-bright) !important;
+}
+
+body .wb-priority-ult,
+body .wb-priority-high {
+  font-size: 10px !important;
+  color: var(--color-purple) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+body .wb-skill-info p {
+  font-weight: 700 !important;
+  margin-top: 4px !important;
+  font-size: 14px !important;
+  color: var(--color-purple) !important;
+}
+
+body .wb-hero-desc {
+  font-size: 14px !important;
+  color: var(--wb-text-muted) !important;
+  line-height: 1.5 !important;
+  margin: 16px 0 20px 0 !important;
+  text-align: left !important;
+}
+
+/* ЖЕЛЕЗОБЕТОННАЯ СТИЛИЗАЦИЯ КНОПКИ «ОТКРЫТЬ ГАЙД» */
+body .wb-analytics-btn,
+body .wb-hero-custom-btn {
+  display: block !important;
+  text-align: center !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  background: var(--wb-bg-surface) !important;
+  color: var(--wb-text-bright) !important;
+  border: 1px solid var(--wb-border) !important;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.2s ease, 
+              border-color 0.2s ease, 
+              transform 0.1s ease !important;
+}
+
+/* Фиолетовый ховер при наведении напрямую на саму кнопку */
+body .wb-analytics-btn:hover,
+body .wb-hero-custom-btn:hover {
+  background: var(--color-purple) !important;
+  color: #ffffff !important;
+  border-color: var(--color-purple) !important;
+}
+
+/* Интерактивный ховер: при наведении на карточку кнопка автоматически загорается фиолетовым */
+body .wb-hero-card:hover .wb-analytics-btn,
+body .wb-section.wb-hero-grid-item:hover .wb-hero-custom-btn {
+  background: var(--color-purple) !important;
+  color: #ffffff !important;
+  border-color: var(--color-purple) !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Микро-взаимодействие при нажатии (клик) */
+body .wb-analytics-btn:active,
+body .wb-hero-custom-btn:active {
+  transform: scale(0.97) !important;
+  background: #6d28d9 !important;
+  border-color: #6d28d9 !important;
+}
+
+/* СИСТЕМНЫЙ ПОДВАЛ */
+body .wb-premium-footer {
+  text-align: center !important;
+  padding: 40px 0 !important;
+  border-top: 1px solid var(--wb-border) !important;
+  color: var(--wb-text-disabled) !important;
+  font-size: 13px !important;
+  margin-top: 60px !important;
+}
+
+/* RESPONSIVE MEDIA QUERIES (АДАПТИВНОСТЬ) */
+@media (max-width: 768px) {
+  body .wb-heroes-grid,
+  body .wb-skills-dashboard {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  body .wb-main-container {
+    margin-top: 100px !important;
+  }
+}

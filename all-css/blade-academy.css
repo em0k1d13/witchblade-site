@@ -1,0 +1,630 @@
+/* ==========================================================================
+   WITCHBLADE ACADEMY: ULTIMATE PRE-MADE AAA STYLES (PART 1)
+   ========================================================================== */
+
+@import url('https://googleapis.com');
+
+@keyframes meshPulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.05); }
+  100% { opacity: 0.3; transform: scale(1); }
+}
+
+@keyframes textShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes lineGlow {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* СБРОС СИСТЕМНЫХ ОТСТУПОВ И ФИКС ЦВЕТА БОКОВЫХ ЗОН */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #030303 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ГЛАВНАЯ СТРУКТУРНАЯ СЕКЦИЯ С КИБЕР-СЕТКОЙ И СВЕЧЕНИЕМ */
+.academy-page-container {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding-top: 60px;
+  padding-bottom: 160px;
+  position: relative;
+  background-color: #030303;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.academy-page-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.academy-page-container::after {
+  content: '';
+  position: absolute;
+  top: -10%; left: 30%; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.14) 0%, rgba(239, 68, 68, 0.04) 50%, transparent 100%);
+  filter: blur(120px);
+  z-index: 1;
+  pointer-events: none;
+  animation: meshPulse 8s ease-in-out infinite;
+}
+
+.academy-page-container .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* ПРЕМИАЛЬНАЯ ПАНЕЛЬ НАВИГАЦИИ (SITE HEADER) */
+.site-header {
+  background: rgba(10, 10, 14, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 16px 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.brand-link {
+  text-decoration: none;
+}
+
+.brand-text strong {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ffffff 40%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-sub {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8b5cf6 !important;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.site-nav ul {
+  display: flex !important;
+  gap: 12px !important;
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  text-decoration: none !important;
+  color: #94a3b8 !important;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px !important;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.site-nav a::after {
+  display: none !important;
+}
+
+.site-nav a:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ИСПРАВЛЕНО: Активная вкладка теперь ведет себя как обычная ссылка */
+.site-nav a.active {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.site-nav a.active:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+/* ==========================================================================
+   WITCHBLADE ACADEMY: ULTIMATE PRE-MADE AAA STYLES (PART 2)
+   ========================================================================== */
+
+/* ТИПОГРАФИКА АКАДЕМИИ */
+.academy-hero {
+  margin: 60px auto 90px;
+  text-align: center;
+}
+
+.academy-hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, #ffffff 10%, #a78bfa 50%, #f43f5e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 7s linear infinite;
+  display: inline-block;
+}
+
+.academy-subtitle {
+  font-size: 20px;
+  color: #94a3b8;
+  line-height: 1.8;
+  max-width: 740px;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+/* КАРТОЧКИ И СПИСКИ (Glassmorphism) */
+.academy-about {
+  margin-bottom: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.academy-info-card {
+  background: rgba(13, 13, 17, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 28px;
+  padding: 56px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.academy-info-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+  transition: none;
+}
+
+.academy-info-card:hover::after {
+  animation: lineGlow 1.2s ease-in-out infinite;
+}
+
+.academy-info-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 50px rgba(139, 92, 246, 0.1);
+}
+
+.academy-icon {
+  font-size: 3.5rem;
+  margin-bottom: 28px;
+  display: inline-block;
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
+}
+
+.academy-icon-box {
+  display: inline-block;
+}
+
+.academy-info-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.academy-info-card p {
+  font-size: 16px;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.custom-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-bullet-list li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.custom-bullet-list li strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.custom-bullet-list li::before {
+  content: '';
+  position: absolute;
+  left: 6px; top: 10px;
+  width: 5px; height: 5px;
+  background-color: #8b5cf6;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 3px #8b5cf6;
+}
+
+/* ИНТЕРАКТИВНЫЙ БЛОК КАЛЬКУЛЯТОРА И ФИКС ПОЛЗУНКОВ */
+.academy-test {
+  background: linear-gradient(180deg, rgba(13, 13, 17, 0.4) 0%, rgba(7, 7, 10, 0.7) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  padding: 64px;
+  margin-bottom: 90px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.academy-test h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.academy-test p {
+  color: #71717a;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.test-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.test-calculator input[type="number"] {
+  width: 220px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  background-color: #07070a;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+  -moz-appearance: textfield;
+}
+
+.test-calculator input[type="number"]::-webkit-outer-spin-button,
+.test-calculator input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.test-calculator input[type="number"]:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.test-calculator .btn {
+  width: auto;
+  padding: 20px 48px;
+}
+
+.test-result-text {
+  margin-top: 36px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  min-height: 24px;
+}
+
+/* КИБЕР-ФОРМА ЗАПИСИ */
+.academy-enroll {
+  background: rgba(10, 10, 14, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 36px;
+  padding: 80px 60px;
+  box-sizing: border-box;
+}
+
+.academy-enroll h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+}
+
+.academy-enroll p {
+  color: #71717a;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.academy-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 56px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.academy-form-grid .full-width {
+  grid-column: span 2;
+}
+
+.academy-form-grid label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #71717a;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.academy-form-grid input,
+.academy-form-grid textarea {
+  width: 100%;
+  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  background-color: #050507;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.academy-form-grid input:focus,
+.academy-form-grid textarea:focus {
+  border-color: #8b5cf6;
+  background-color: #0a0a0f;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+.academy-form-grid textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* КНОПКИ И ПОДВАЛ */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.academy-page-container .btn.primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%) !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+  color: #fff !important;
+}
+
+.academy-page-container .btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45);
+  background: linear-gradient(135deg, #a78bfa 0%, #4f46e5 100%) !important;
+}
+
+.site-footer {
+  background-color: #0d0d11;
+  border-top: 1px solid #1f1f29;
+  padding: 60px 0 30px;
+  margin-top: 120px;
+  text-align: left;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-brand .footer-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.footer-brand .footer-description {
+  font-size: 14px;
+  color: #71717a;
+  margin-top: 12px;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 12px;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-nav ul,
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 12px;
+}
+
+.footer-nav a,
+.social-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:hover,
+.social-links a:hover {
+  color: #8b5cf6;
+}
+
+.footer-bottom-container {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 20px 24px 0;
+  border-top: 1px solid #1f1f29;
+  text-align: center;
+  color: #71717a;
+  font-size: 13px;
+}
+
+/* МОДАЛЬНЫЕ ОКНА */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.modal-hidden {
+  display: none !important;
+}
+
+.modal-content {
+  background: #0d0d11;
+  border: 1px solid #1f1f29;
+  padding: 40px;
+  border-radius: 24px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* АДАПТИВНЫЕ МЕДИА-ЗАПРОСЫ */
+@media (max-width: 960px) {
+  .academy-about {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .academy-hero h1 {
+    font-size: 52px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 15px 0 !important;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .academy-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+  .academy-info-card {
+    padding: 30px;
+  }
+  .academy-enroll {
+    padding: 48px 24px;
+  }
+  .academy-form-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .academy-form-grid .full-width {
+    grid-column: span 1;
+  }
+  .test-calculator {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .test-calculator input[type="number"] {
+    width: 100%;
+  }
+}

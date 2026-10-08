@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Гайды: Герои — Мета-разборы от Witchblvde</title>
+  <link rel="stylesheet" href="../style1.css">
+  <link rel="stylesheet" href="../all-css/meepo-style.css">
+  <style>
+    /* Стили интерактивных карточек для всех героев */
+    .wb-hero-grid-item {
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-between; 
+      margin-bottom: 0;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Эффект при наведении на ЛЮБУЮ карточку героя */
+    .wb-hero-grid-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--wb-purple) !important;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.2);
+    }
+
+    /* Базовый стиль кнопки «Открыть гайд» */
+    .wb-hero-custom-btn {
+      display: block; 
+      text-align: center; 
+      background: var(--wb-bg-surface); 
+      border: 1px solid var(--wb-border); 
+      color: #fff; 
+      padding: 12px; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      font-weight: 600; 
+      transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.1s ease;
+    }
+
+    /* Эффект изменения цвета кнопки при наведении на карточку */
+    .wb-hero-grid-item:hover .wb-hero-custom-btn {
+      background-color: var(--wb-purple);
+      border-color: var(--wb-purple);
+    }
+
+    /* Эффект нажатия (клик) на саму кнопку */
+    .wb-hero-custom-btn:active {
+      transform: scale(0.98);
+      background-color: #6d28d9 !important; /* Глубокий фиолетовый при клике */
+      border-color: #6d28d9 !important;
+    }
+  </style>
+</head>
+<body class="wb-premium-page">
+
+<header class="site-header" role="navigation" aria-label="Главная навигация">
+  <div class="container header-container">
+    <div class="brand">
+      <div class="brand-text">
+        <strong>Whitchblade</strong><br/>
+        <span class="brand-sub">Dota 2 стример</span>
+      </div>
+    </div>
+    <nav aria-label="Разделы сайта" class="site-nav">
+      <ul>
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="heroes.html">⚔️ Гайды: Герои</a></li>
+        <li><a href="blade-academy.html">🎓 BLVDE ACADEMY</a></li>
+        <li><a href="../index.html#clips">Клипы</a></li>
+        <li><a href="../index.html#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wb-main-container">
+  
+  <div style="margin-bottom: 40px; text-align: center;">
+    <span class="wb-category-tag">Pro Tracker Статистика</span>
+    <h1 style="font-size: 36px; font-weight: 800; margin: 10px 0;">Авторские гайды на сигнатурных героев</h1>
+    <p class="wb-hero-lead">Актуальные сборки предметов, раскачки способностей, матрицы талантов и макро-фишки от Романа.</p>
+  </div>
+
+  <div class="wb-skills-dashboard" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+
+    <!-- Карточка 1: Naga Siren -->
+    <div class="wb-section wb-hero-grid-item">
+      <div class="wb-skill-card" style="background: transparent; padding: 0; margin-bottom: 16px;">
+        <img src="../all_photo1/naga_avatar.jpg" alt="Naga Siren" class="wb-skill-thumb" style="width: 64px; height: 64px;">
+        <div class="wb-skill-info" style="width: 100%;">
+          <h4>Naga Siren <span class="wb-priority-ult">Топ-1 Мира</span></h4>
+          <p style="color: var(--wb-purple); font-weight: 700; margin-top: 4px;">Рекорд: 2207 GPM</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: var(--wb-text-muted); line-height: 1.5; margin-bottom: 20px;">Главный сигнатурный персонаж стримера. Полный разбор идеального контроля иллюзий, распределения пачек по всей карте и жесткого макро-доминирования.</p>
+      <a href="naga.html" class="wb-hero-custom-btn">Открыть гайд</a>
+    </div>
+
+    <!-- Карточка 2: Meepo -->
+    <div class="wb-section wb-hero-grid-item">
+      <div class="wb-skill-card" style="background: transparent; padding: 0; margin-bottom: 16px;">
+        <img src="../all_photo1/meepo_avatar.jpg" alt="Meepo" class="wb-skill-thumb" style="width: 64px; height: 64px;">
+        <div class="wb-skill-info" style="width: 100%;">
+          <h4>Meepo <span class="wb-priority-high">Микроконтроль</span></h4>
+          <p style="color: var(--wb-purple); font-weight: 700; margin-top: 4px;">Винрейт: 59%</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: var(--wb-text-muted); line-height: 1.5; margin-bottom: 20px;">Параллельный фарм лесных лагерей, механика быстрого взрывного Poof-комбо и правильное распределение активных слотов и кулдаунов между клонами.</p>
+      <a href="meepo.html" class="wb-hero-custom-btn">Открыть гайд</a>
+    </div>
+
+    <!-- Карточка 3: Phantom Lancer -->
+    <div class="wb-section wb-hero-grid-item">
+      <div class="wb-skill-card" style="background: transparent; padding: 0; margin-bottom: 16px;">
+        <img src="../all_photo1/phantom_lancer_avatar.jpg" alt="Phantom Lancer" class="wb-skill-thumb" style="width: 64px; height: 64px;">
+        <div class="wb-skill-info" style="width: 100%;">
+          <h4>Phantom Lancer <span class="wb-priority-high">Иллюзионист</span></h4>
+          <p style="color: var(--wb-purple); font-weight: 700; margin-top: 4px;">Винрейт: 58%</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: var(--wb-text-muted); line-height: 1.5; margin-bottom: 20px;">Реализация раннего тайминга Diffusal Blade, лавина бесконечных фантомов, выжигание маны саппортам и уклонение от летящих заклинаний через Doppelganger.</p>
+      <a href="phantom-lancer.html" class="wb-hero-custom-btn">Открыть гайд</a>
+    </div>
+
+    <!-- Карточка 4: Terrorblade -->
+    <div class="wb-section wb-hero-grid-item">
+      <div class="wb-skill-card" style="background: transparent; padding: 0; margin-bottom: 16px;">
+        <img src="../all_photo1/terrorblade_avatar.jpg" alt="Terrorblade" class="wb-skill-thumb" style="width: 64px; height: 64px;">
+        <div class="wb-skill-info" style="width: 100%;">
+          <h4>Terrorblade <span class="wb-priority-high">Лейт-Лорд</span></h4>
+          <p style="color: var(--wb-purple); font-weight: 700; margin-top: 4px;">Ср. GPM: 700+</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: var(--wb-text-muted); line-height: 1.5; margin-bottom: 20px;">Реализация мощной осадной демонической формы Metamorphosis, безопасный фарм опасных зон через Conjure Image и перевороты драк вовремя нажатым Sunder.</p>
+      <a href="terrorblade.html" class="wb-hero-custom-btn">Открыть гайд</a>
+    </div>
+
+    <!-- Карточка 5: Viper -->
+    <div class="wb-section wb-hero-grid-item">
+      <div class="wb-skill-card" style="background: transparent; padding: 0; margin-bottom: 16px;">
+        <img src="../all_photo1/viper_avatar.jpg" alt="Viper" class="wb-skill-thumb" style="width: 64px; height: 64px;">
+        <div class="wb-skill-info" style="width: 100%;">
+          <h4>Viper <span class="wb-priority-high">Доминатор линии</span></h4>
+          <p style="color: var(--wb-purple); font-weight: 700; margin-top: 4px;">Corrosive DPS: 100%</p>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: var(--wb-text-muted); line-height: 1.5; margin-bottom: 20px;">Метовое удушение мида, снижение магического сопротивления через Parasma, отключение пассивок за счет Nethertoxin и плотный билд через Aghanim.</p>
+      <a href="viper.html" class="wb-hero-custom-btn">Открыть гайд</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-brand">
+      <span class="footer-title">Witchblade</span>
+      <p class="footer-description">Официальный сайт стримера и инженера. Лайв-трансляции, глубокая аналитика и гайды по Dota 2.</p>
+    </div>
+      <div class="footer-nav">
+      <span class="footer-heading">Навигация</span>
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="all-html/heroes.html">Гайды</a></li>
+        <li><a href="all-html/blade-academy.html">Academy</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-socials">
+      <span class="footer-heading">Сообщество</span>
+      <div class="social-links">
+        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer">🟪 Twitch</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">🟥 YouTube</a>
+        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">🟦 Telegram</a>
+      </div>
+    </div>
+  </div>
+    <div class="footer-bottom-container">
+      <p>&copy; 2026 Witchblade. Все права защищены.</p>
+      <p class="footer-credit">Designed with passion for Dota 2</p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
